@@ -82,7 +82,6 @@ public class ItemBetterSpellBook extends ItemSpellbook {
     public static UUID getOrCreateUUID(ItemStack stack) {
         if (NBTHelper.getString(stack, TAG_BOOK_UUID) == null) {
             var uuid = UUID.randomUUID();
-            System.out.println("new: " + uuid);
             NBTHelper.putString(stack, TAG_BOOK_UUID, uuid.toString());
         }
         return UUID.fromString(NBTHelper.getString(stack, TAG_BOOK_UUID));

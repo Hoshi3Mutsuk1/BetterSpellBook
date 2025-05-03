@@ -41,7 +41,7 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_api_version}"
     modRuntimeOnly "net.fabricmc:fabric-language-kotlin:1.9.5+kotlin.1.8.22"
 
-    modImplementation "${modID}:serialization-hooks:${serialization_hooks_version}"
+modImplementation "${modID}:serialization-hooks:${serialization_hooks_version}"
     ["base", "item", "block", "entity"].forEach {
         modRuntimeOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-${it}:${cca_version}"
     }

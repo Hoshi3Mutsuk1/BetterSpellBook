@@ -15,14 +15,11 @@ public record MsgSpellBookContentsS2C(boolean isFullData, UUID spellbookUuid, Co
     }
 
     public static void handle (MsgSpellBookContentsS2C self) {
-        Minecraft.getInstance().execute(new Runnable() {
-            @Override
-            public void run() {
-                if (self.isFullData()) {
-                    SpellBookStorage.get().readSpellbookContents(self.spellbookContents);
-                } else {
-                    SpellBookStorage.get().setSpellbookContents(self.spellbookUuid(), self.spellbookContents());
-                }
+        Minecraft.getInstance().execute(() -> {
+            if (self.isFullData()) {
+                SpellBookStorage.get().readSpellbookContents(self.spellbookContents);
+            } else {
+                SpellBookStorage.get().setSpellbookContents(self.spellbookUuid(), self.spellbookContents());
             }
         });
     }
