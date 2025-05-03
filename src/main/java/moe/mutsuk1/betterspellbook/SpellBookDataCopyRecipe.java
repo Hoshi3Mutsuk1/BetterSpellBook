@@ -1,6 +1,5 @@
 package moe.mutsuk1.betterspellbook;
 
-import at.petrak.hexcasting.common.items.storage.ItemSpellbook;
 import at.petrak.hexcasting.common.lib.HexItems;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
@@ -36,9 +35,11 @@ public class SpellBookDataCopyRecipe extends CustomRecipe {
         ItemStack out = ItemStack.EMPTY;
         for (var stack : container.getItems()){
             if (stack.is(HexItems.SPELLBOOK)) {
-                var copiedTag = stack.getTag().copy();
                 out = new ItemStack(BetterSpellBook.BETTER_SPELL_BOOK);
-                out.setTag(copiedTag);
+                if (stack.getTag() != null) {
+                    var copiedTag = stack.getTag().copy();
+                    out.setTag(copiedTag);
+                }
             }
         }
         return out;

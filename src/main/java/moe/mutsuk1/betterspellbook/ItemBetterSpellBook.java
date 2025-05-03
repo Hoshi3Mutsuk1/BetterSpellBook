@@ -29,7 +29,7 @@ public class ItemBetterSpellBook extends ItemSpellbook {
         if (NBTHelper.contains(stack, TAG_PAGES)){
             if (!pLevel.isClientSide) {
                 ItemBetterSpellBook.broadcastChanges(getOrCreateUUID(stack), NBTHelper.getCompound(stack, TAG_PAGES));
-            };
+            }
             NBTHelper.remove(stack, TAG_PAGES);
         }
         super.inventoryTick(stack, pLevel, pEntity, pSlotId, pIsSelected);

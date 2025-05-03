@@ -7,7 +7,6 @@
   "authors": ["sanui"],
   "contact": {},
   "license": "All-Rights-Reserved",
-  "icon": "assets/betterspellbook/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
