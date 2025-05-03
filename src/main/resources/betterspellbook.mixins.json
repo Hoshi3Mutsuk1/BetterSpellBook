@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "moe.mutsuk1.betterspellbook.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "MixinItemSpellbook",
+    "MixinMsgShiftScrollC2S",
+    "MixinShiftScrollListener"
+  ],
+  "client": [
+    "MixinIotaHolderItem"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

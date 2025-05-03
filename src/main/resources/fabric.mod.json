@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "betterspellbook",
+  "version": "${version}",
+  "name": "BetterSpellbook",
+  "description": "",
+  "authors": ["sanui"],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/betterspellbook/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "moe.mutsuk1.betterspellbook.BetterSpellBook"
+    ],
+    "client": [
+      "moe.mutsuk1.betterspellbook.BetterSpellBook"
+    ]
+  },
+  "mixins": [
+    "betterspellbook.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}"
+  }
+}
